@@ -64,7 +64,7 @@ function initMap() {
 		{},
 		{
 			iconLayout: 'default#image',
-			iconImageHref: '../img/map.png',
+			iconImageHref: '../grizli/img/map.png',
 			iconImageSize: [55, 75],
 			iconImageOffset: [-27, -55],
 		}

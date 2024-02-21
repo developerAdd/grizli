@@ -57,7 +57,7 @@ $(document).on('click', '.product-block__rotate-button button', function (e) {
 	console.log(view360source)
 
 	for (var i = 1; i <= frameNumber; i++) {
-		var image = '/360image/_' + i + '.png'
+		var image = '/grizli/360image/_' + i + '.png'
 		rotateImage.push(image)
 	}
 
