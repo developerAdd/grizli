@@ -411,11 +411,14 @@ body {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
+	transition: opacity 0.1s ease 0.7s, visibility 0.1s ease 0.7s,
+		pointer-events 0.1s ease 0.7s;
 }
 .nav._show {
 	opacity: 1;
 	visibility: visible;
 	pointer-events: all;
+	transition: all 0s ease 0s;
 }
 .nav__back {
 	position: absolute;
@@ -438,7 +441,7 @@ body {
 	margin: auto;
 	border-radius: 50%;
 	background-color: #00161d;
-	transition: all 1.4s ease 0s;
+	transition: all 0.7s ease 0s;
 }
 .dis-scroll {
 	position: fixed;
@@ -456,6 +459,7 @@ body {
 .nav._show .nav__back::before {
 	width: 500vh;
 	height: 500vh;
+	transition: all 1.4s ease 0s;
 }
 .nav__scroll {
 	width: 100%;
@@ -1339,6 +1343,10 @@ a.site-btn > span:not(.site-btn-icon),
 	position: relative;
 	overflow: hidden;
 }
+.select2-hidden-accessible {
+	opacity: 0 !important;
+	visibility: hidden !important;
+}
 .about__back {
 	position: absolute;
 	width: 100%;
@@ -1376,6 +1384,7 @@ a.site-btn > span:not(.site-btn-icon),
 .about__slider > .swiper {
 	width: 100%;
 	height: auto;
+	overflow: visible;
 }
 .about__slider .swiper-slide {
 	width: 100%;
@@ -1394,7 +1403,7 @@ a.site-btn > span:not(.site-btn-icon),
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	margin-bottom: 17px;
-	transform: translateX(-10%);
+	transform: translateX(-5%);
 	opacity: 0;
 	visibility: hidden;
 	transition: none;
@@ -1405,7 +1414,7 @@ a.site-btn > span:not(.site-btn-icon),
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 14px;
-	transform: translateX(-10%);
+	transform: translateX(-5%);
 	opacity: 0;
 	visibility: hidden;
 	transition: none;
@@ -1414,13 +1423,13 @@ a.site-btn > span:not(.site-btn-icon),
 	transform: translateX(0);
 	opacity: 1;
 	visibility: visible;
-	transition: all 0.4s ease 0.2s;
+	transition: all 0.9s ease 0.2s;
 }
 .swiper-slide-active .about__text {
 	transform: translateX(0);
 	opacity: 1;
 	visibility: visible;
-	transition: all 0.4s ease 0.4s;
+	transition: all 0.9s ease 0.6s;
 }
 .about__actions {
 	width: 100%;
@@ -2560,6 +2569,6 @@ a.site-btn > span:not(.site-btn-icon),
 .remodal__close {
 	top: 12px;
 	right: 12px;
-	width: 20px;
-	height: 20px;
+	width: 40px;
+	height: 40px;
 }

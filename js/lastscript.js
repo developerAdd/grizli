@@ -31,24 +31,27 @@ $(document).on('click', '.product-block__main-tabs-item', function (e) {
 	})
 })
 
-$(document).on('click', '.product-block__color-item', function (e) {
-	e.preventDefault()
+const blockColors = document.querySelectorAll('.__colorPicker')
+for (const blockColor of blockColors) {
+	$(blockColor).on('click', '.product-block__color-item', function (e) {
+		e.preventDefault()
 
-	if ($(this).hasClass('active')) {
-		return
-	}
+		if ($(this).hasClass('active')) {
+			return
+		}
 
-	if ($('.threesixty').hasClass('inited')) {
-		$('.threesixty').fadeOut(400, function () {
-			$('.product-block__images-box > img').fadeIn()
-		})
-	}
+		if ($('.threesixty').hasClass('inited')) {
+			$('.threesixty').fadeOut(400, function () {
+				$('.product-block__images-box > img').fadeIn()
+			})
+		}
 
-	var image = $(this).data('image')
-	$('.product-block__color-item').removeClass('active')
-	$(this).addClass('active')
-	$('.product-block__images-box img').attr('src', image)
-})
+		var image = $(this).data('image')
+		$('.product-block__color-item').removeClass('active')
+		$(this).addClass('active')
+		$('.product-block__images-box img').attr('src', image)
+	})
+}
 
 $(document).on('click', '.product-block__rotate-button button', function (e) {
 	e.preventDefault()

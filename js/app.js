@@ -272,24 +272,23 @@ if (lines.length > 0) {
 
 var swiperThing = new Swiper('.catalogsCategories__slider .swiper', {
 	slidesPerView: 1,
+	initialSlide: 1,
 	effect: 'creative',
-	loop: true,
-	loopedSlides: 3,
+	enabled: false,
 	creativeEffect: {
 		limitProgress: 2,
 		prev: {
-			translate: ['-30%', 0, 0],
+			translate: ['-36%', 0, 0],
 			opacity: 0.5,
 			scale: 0.6,
 		},
 		next: {
-			translate: ['30%', 0, 0],
+			translate: ['36%', 0, 0],
 			opacity: 0.5,
 			scale: 0.6,
 		},
 	},
 })
-
 var swiperSale = new Swiper('.sale__thumb', {
 	spaceBetween: 12,
 	slidesPerView: 2,
